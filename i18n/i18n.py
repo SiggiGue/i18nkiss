@@ -1,28 +1,50 @@
 # -- coding: utf-8 --
 """This module implements a translator for internationalization usin yaml.
-It is a hardcore KISS module! Without any Templating possibilities.
+It is a hardcore KISS module!
 Have Fun!
 
 Examples
 --------
+This is an example yml file `foo.yml`:
+```yaml
+de:
+    greet: Hallo!
+    mynameis: Mein Name ist {name}.
+en:
+    greet: Hello!
+    mynameis: My name is {name}.
+es:
+    greet: ¡Hola!
+    mynameis: Mi nombre est {name}.
+
+```
+
+The file is used in following usage example:
+```python
 tr = load_translator('foo.yml')
 tr.language = 'en'
 tr.fallback = 'de'
 _ = tr.t
 print(_('greet'))
+print(_('mynameis').format(name='Siegfried'))
 
 tr.language = 'de'
 print(_('greet'))
+print(_('mynameis').format(name='Siegfried'))
 
 language = 'es'
 print(_('greet'))
+print(_('mynameis').format(name='Siegfried'))
 
 language = 'gr'
 print(_('greet'))
+print(_('mynameis').format(name='Siegfried'))
 
 language = 'jp'
 tr.fallback = 'it'
 print(_('greet'))
+print(_('mynameis').format(name='Siegfried'))
+```
 
 """
 
@@ -109,16 +131,21 @@ if __name__ == "__main__":
     tr.fallback = 'de'
     _ = tr.t
     print(_('greet'))
+    print(_('mynameis').format(name='Siegfried'))
 
     tr.language = 'de'
     print(_('greet'))
+    print(_('mynameis').format(name='Siegfried'))
 
     tr.language = 'es'
     print(_('greet'))
+    print(_('mynameis').format(name='Siegfried'))
 
     tr.language = 'gr'
     print(_('greet'))
+    print(_('mynameis').format(name='Siegfried'))
 
     tr.language = 'jp'
     tr.fallback = 'it'
     print(_('greet'))
+    print(_('mynameis').format(name='Siegfried'))

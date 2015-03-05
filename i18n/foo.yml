@@ -1,6 +1,9 @@
 de:
     greet: Hallo!
+    mynameis: Mein Name ist {name}.
 en:
     greet: Hello!
+    mynameis: My name is {name}.
 es:
     greet: ¡Hola!
+    mynameis: Mi nombre est {name}.
