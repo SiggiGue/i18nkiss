@@ -73,3 +73,4 @@ mynameis
 
 Have Fun!
 
+BSD licensed.

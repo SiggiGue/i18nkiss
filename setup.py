@@ -7,6 +7,6 @@ setup(name='i18n',
       description="i18n tool in kiss mode.",
       author='Siegfried Guendert',
       author_email='siegfried.guendert@googlemail.com',
-      license='ITAP GmbH',
+      license='BSD',
       keywords='i18n',
       packages=find_packages(exclude=('docs', '.git')))
