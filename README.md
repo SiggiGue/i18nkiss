@@ -1,9 +1,9 @@
-#i18nkiss
-#Internationalization in keep it simple stupid manner
+# i18nkiss
+# Internationalization in keep it simple stupid manner
 
 This is a keep ist simple internationalization tool with a Translator instance suporting yaml-files containing translation definitions. It does support templating due to the .format() method in python strings. For the simplicity the support of pluralization is not provided. In that case you should consider using the more complex `gettext` module.
 
-##Setup
+## Setup
 * clone this repo.
 * cd to the cloned repo.
 * type `python setup.py install`
